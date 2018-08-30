@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>金格科技-iWebOffice2015智能文档中间件示例程序</title>
+<link rel='stylesheet' type='text/css' href='css/iWebProduct.css' />
+<script src="js/WebOffice.js"></script>
+<script type="text/javascript">
+ 	var WebOffice = new WebOffice2015(); //创建WebOffice对象
+</script>
+<script language="javascript">
+  function CheckValue(theForm){
+    var Name=document.getElementById("MacroName").value;
+    var Text=document.getElementById("MacroText").value;
+    if(Name=="" || Text==""){
+    	alert("不能为空,请重新输入");
+    	return false;
+    }
+    WebOffice.setObj(window.opener.document.getElementById("WebOffice2015"));//给2015对象赋值
+	window.close();
+	WebOffice.WebRunMacro(Name,Text);
+	
+	//return;
+  }
+</SCRIPT>
+</head>
+
+<body>
+<form name="iForm">
+<div>
+<table border=0  cellspacing='0' cellpadding='0' width=100% height=100% align="center" >
+<tr>
+<td align="left">
+  <table border=0  cellspacing='0' cellpadding='0' style="font:'仿宋';font-size:12px">
+  <tr>
+    <td style="width:25%">请输入宏名称:</td>
+    <td style="width:75%" align="left"><input type="text" id="MacroName" value="test" onclick="this.focus();this.select();"></td>
+  </tr>
+  <tr>
+    <td style="width:23%">请输入宏命令:<font color=ff0000>(注: 行与行之间用回车隔开)</font></td>
+    <td style="width:75%" align="left"><textarea cols=40 rows=8 id="MacroText" onclick="this.focus();this.select();">Sub test()
+MsgBox "test"
+End Sub</textarea></td>
+  </tr>
+  </table>
+</td>
+</tr>
+<tr>
+<td align=center>
+<input type=button value="  确定  " onClick="CheckValue(iForm);">
+<input type=button value="  取消  " onClick="window.close();">
+</td>
+</tr>
+</table>
+</div>
+</form>
+</body>
+</html>
