@@ -17,7 +17,11 @@
             <source>10</source>
             <target>10</target>
         </configuration>
+<<<<<<< HEAD
     	</plugin>
+=======
+    </plugin>
+>>>>>>> branch 'master' of git@github.com:zhajinyi/JavaStudy.git
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
