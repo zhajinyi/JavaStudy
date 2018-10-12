@@ -17,7 +17,7 @@
             <source>10</source>
             <target>10</target>
         </configuration>
-    </plugin>
+    	</plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
