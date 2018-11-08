@@ -5,30 +5,30 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>  
 
-
-
 <build>
-    <plugins>
-        <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
-        <configuration>
-            <source>1.8</source>
-            <target>1.8</target>
-        </configuration>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+        	<artifactId>maven-compiler-plugin</artifactId>
+        	<version>3.1</version>
+        	<configuration>
+            	<source>1.8</source>
+            	<target>1.8</target>
+            	<encoding>UTF-8</encoding>
+        	</configuration>
     	</plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.0.0</version>
-                <configuration>
-                    <webResources>
-                        <resource>
-                            <directory>src\main\WebContent\WEB-INF</directory>
-                        </resource>
-                    </webResources>
-                </configuration>
+    	
+		<plugin>
+        	<groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.0.0</version>
+            <configuration>
+            	<webResources>
+                	<resource>
+                    	<directory>src\main\WebContent\WEB-INF</directory>
+                    </resource>
+                </webResources>
+            </configuration>
             </plugin>    
     </plugins>
 </build>
@@ -44,7 +44,7 @@
   <!-- JSR303数据校验，支持Tomcat7及以上
   	Tomcat7以下的服务器：el表达式不具体，额外需要给服务器替换新的标准的el表达式
    -->
-  <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-validator</artifactId>
