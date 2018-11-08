@@ -14,14 +14,10 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
         <configuration>
-            <source>10</source>
-            <target>10</target>
+            <source>1.8</source>
+            <target>1.8</target>
         </configuration>
-<<<<<<< HEAD
     	</plugin>
-=======
-    </plugin>
->>>>>>> branch 'master' of git@github.com:zhajinyi/JavaStudy.git
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
