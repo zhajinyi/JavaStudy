@@ -36,7 +36,7 @@
     text-align: center;	
 }
 #pageinfo{
-	margin-top: 25px;
+	/* margin-top: 25px; */
 }
 #pageUl a{
 	width: 55px;
@@ -208,13 +208,16 @@
 	</div>
 	
 		<!-- 分页信息栏 -->
-		<div class="row" style="position: absolute;bottom: 80px;width: 100%;">
-			<div id="pageinfo" class="col-md-5 col-md-offset-1"></div>
-			<div id="page_nav" class="col-md-6">
-				<nav aria-label="Page navigation">
-	  				<ul id="pageUl" class="pagination">
-					</ul>
-				</nav>				
+		
+		<div class="row" style="width: 100%;padding: 0 25px 0 25px;">
+			<div style="margin:auto;width: 1000px;">
+				<div id="pageinfo" class="" style="float: left;padding-top: 25px;"></div>
+				<div id="page_nav" class="" style="float: right;">
+					<nav aria-label="Page navigation">
+		  				<ul id="pageUl" class="pagination">
+						</ul>
+					</nav>				
+				</div>
 			</div>
 		</div>	
 <script type="text/javascript">
