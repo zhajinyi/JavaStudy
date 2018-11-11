@@ -39,7 +39,17 @@
 	/* margin-top: 25px; */
 }
 #pageUl a{
-	width: 55px;
+	width: 40px;
+    text-align: center;
+    font-size:14px;
+    padding: 4px 8px;
+}
+#pageUl #index{
+	width: 54px !important;
+    text-align: center;
+}
+#pageUl #last{
+	width: 54px !important;
     text-align: center;
 }
 </style>
@@ -163,7 +173,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-        <button type="button" class="btn btn-primary" id="empUpdate_btn" ajaxcheck="error">更新</button>
+        <button type="button" class="btn btn-primary" id="empUpdate_btn" ajaxcheck="success">更新</button>
       </div>
     </div>
   </div>
@@ -181,7 +191,7 @@
 		</div>
 		<!-- 按钮 -->
 		<div class="row" id="operate_row">
-			<div class="col-md-3 col-md-offset-9">
+			<div class="col-md-4 col-md-offset-8">
 				<button type="button" class="btn btn-primary" id="empAdd_btn">新增</button>
 				<button type="button" class="btn btn-danger" id="empDelAll_btn">删除</button>
 			</div>
@@ -210,8 +220,8 @@
 		<!-- 分页信息栏 -->
 		
 		<div class="row" style="width: 100%;padding: 0 25px 0 25px;">
-			<div style="margin:auto;width: 1000px;">
-				<div id="pageinfo" class="" style="float: left;padding-top: 25px;"></div>
+			<div style="margin:auto;width: 80%;">
+				<div id="pageinfo" class="" style="float: left;padding-top: 25px;padding-left: 30px;"></div>
 				<div id="page_nav" class="" style="float: right;">
 					<nav aria-label="Page navigation">
 		  				<ul id="pageUl" class="pagination">
@@ -286,7 +296,7 @@
 		var navigatepageNums = result.extend.PageInfo.navigatepageNums;
 		var pageUl = $("#pageUl");
 		pageUl.empty();
-		var firstPageLi = $("<li></li>").append($("<a></a>").append("首页").attr("href","#"));
+		var firstPageLi = $("<li></li>").append($("<a id='index'></a>").append("首页").attr("href","#"));
 
 		var prePageLi = $("<li></li>").append($("<a></a>").append($("<span></span>").append("&laquo;").attr("aria-hidden","true")));
 	
@@ -302,7 +312,7 @@
 			});				
 		}
 		
-		var lastPageLi = $("<li></li>").append($("<a></a>").append("末页").attr("href","#"));
+		var lastPageLi = $("<li></li>").append($("<a id='last'></a>").append("末页").attr("href","#"));
 		var nextPageLi = $("<li></li>").append($("<a></a>").append($("<span></span>").append("&raquo;").attr("aria-hidden","true")));
 		
 		if(result.extend.PageInfo.hasNextPage == false){
