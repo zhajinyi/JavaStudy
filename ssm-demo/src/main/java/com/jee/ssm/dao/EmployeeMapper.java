@@ -4,6 +4,7 @@ import com.jee.ssm.bean.Employee;
 import com.jee.ssm.bean.EmployeeExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 public interface EmployeeMapper {
     long countByExample(EmployeeExample example);

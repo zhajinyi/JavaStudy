@@ -6,7 +6,7 @@
 	</settings>
 
 	<typeAliases>
-		<package name="com.zhajinyi.bean"/>
+		<package name="com.jee.ssm.bean"/>
 	</typeAliases>
 	<plugins>
 		<plugin interceptor="com.github.pagehelper.PageInterceptor">

@@ -38,15 +38,16 @@ public class EmployeeController {
 	@RequestMapping("/emps")
 	public String getEmps(@RequestParam(value="pn",defaultValue="1")Integer pn,
 			Model model) {
-		//�Ƿ�ҳ��ѯ
-		//����pagehelper��������з�ҳ��ѯ
-		//����ҳ���Լ���ҳ���Լ�ÿҳ��д
 		PageHelper.startPage(pn, 5);
 		List<Employee> emps = employeeService.getAll();
 		PageInfo page = new PageInfo(emps,5);
 		model.addAttribute("PageInfo",page);
-		
 		return "list";
+	}
+	
+	@RequestMapping(value = "/emplist")
+	public String toEmpList() {
+		return "list_json";
 	}
 	
 	

@@ -25,6 +25,7 @@
 }
 #content_table{
 	text-align: center;
+	font-size: 16px;
 }
 #pageinfo span{
     background: #337ab7;
@@ -36,7 +37,7 @@
     text-align: center;	
 }
 #pageinfo{
-	margin-top: 25px;
+	padding-top: 26.5px;
 }
 #pageUl a{
 	width: 55px;
@@ -208,13 +209,15 @@
 	</div>
 	
 		<!-- 分页信息栏 -->
-		<div class="row" style="position: absolute;bottom: 80px;width: 100%;">
-			<div id="pageinfo" class="col-md-5 col-md-offset-1"></div>
-			<div id="page_nav" class="col-md-6">
-				<nav aria-label="Page navigation">
-	  				<ul id="pageUl" class="pagination">
-					</ul>
-				</nav>				
+		<div class="row" style="position: absolute;top: 45%;width: 100%;">
+			<div style="width: 80%;margin: auto;height: 75px;">
+				<div id="pageinfo" class="col-xs-3 col-xs-offset-3"></div>
+				<div id="page_nav" class="col-xs-6">
+					<nav aria-label="Page navigation">
+		  				<ul id="pageUl" class="pagination">
+						</ul>
+					</nav>				
+				</div>
 			</div>
 		</div>	
 <script type="text/javascript">
@@ -353,8 +356,6 @@
 			type:"GET",
 			async:false,
 			success:function(result){
-				
-				/* <option>--请选择--</option> */
 				$.each(result.extend.depts,function(){
 					var optionEle = $("<option></option>").append(this.deptName).attr("value",this.deptId);
 					optionEle.appendTo(selectEle);
