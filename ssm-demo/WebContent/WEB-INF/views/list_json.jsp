@@ -286,7 +286,7 @@
 		var navigatepageNums = result.extend.PageInfo.navigatepageNums;
 		var pageUl = $("#pageUl");
 		pageUl.empty();
-		var firstPageLi = $("<li></li>").append($("<a></a>").append("首页").attr("href","#"));
+		var firstPageLi = $("<li></li>").append($("<a></a>").append("首页").attr("href","javascript:void(0);"));
 
 		var prePageLi = $("<li></li>").append($("<a></a>").append($("<span></span>").append("&laquo;").attr("aria-hidden","true")));
 	
@@ -302,7 +302,7 @@
 			});				
 		}
 		
-		var lastPageLi = $("<li></li>").append($("<a></a>").append("末页").attr("href","#"));
+		var lastPageLi = $("<li></li>").append($("<a></a>").append("末页").attr("href","javascript:void(0);"));
 		var nextPageLi = $("<li></li>").append($("<a></a>").append($("<span></span>").append("&raquo;").attr("aria-hidden","true")));
 		
 		if(result.extend.PageInfo.hasNextPage == false){
@@ -319,7 +319,7 @@
 		
 		pageUl.append(firstPageLi).append(prePageLi);
 		$.each(navigatepageNums,function(index,item){
-			var numLi = $("<li></li>").append($("<a></a>").append(item).attr("href","#"));
+			var numLi = $("<li></li>").append($("<a></a>").append(item).attr("href","javascript:void(0);"));
 			if(result.extend.PageInfo.pageNum == item){
 				numLi.addClass("active");
 			}
