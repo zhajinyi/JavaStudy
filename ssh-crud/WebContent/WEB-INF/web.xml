@@ -22,7 +22,7 @@
 	<!-- 指定Spring配置文件所在路径 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:spring.xml</param-value>
+        <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
 
 
