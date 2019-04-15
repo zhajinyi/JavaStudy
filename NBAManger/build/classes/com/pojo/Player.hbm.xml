@@ -29,7 +29,7 @@
             </element>
         </list>
         
-        <many-to-one name="team" class="com.pojo.Team" fetch="join">
+        <many-to-one name="team" class="com.pojo.Team">
             <column name="TID" />
         </many-to-one>
         

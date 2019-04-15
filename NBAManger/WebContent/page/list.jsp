@@ -9,16 +9,12 @@
 
 <script type="text/javascript">
 function del(pid){
-	alert("abc");
 	//用户点击确定
 	if(confirm("是否确定删除")){
 		window.location="${pageContext.request.contextPath }/player_delete?pid="+pid;
 	} 
 }
 </script>
-
-
-
 </head>
 <body>
 

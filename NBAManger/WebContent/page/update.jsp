@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-    <%@ taglib uri="/struts-tags" prefix="s"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -13,7 +12,7 @@
 
 
  
-<form action="/SSH/player_update">
+<form action="/NBAManger/player_update">
 <input type="hidden" name="pid" value="${player.pid}"/>
 球员姓名：<input type="text" name="pname" value="${player.pname}"/></br>
 <s:radio label="性别" list="#{0:'男',1:'女' }" name="psex" value="#request.player.psex"/></br>
