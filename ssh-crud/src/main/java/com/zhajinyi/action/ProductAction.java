@@ -8,52 +8,54 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.zhajinyi.bean.Product;
 import com.zhajinyi.service.ProductService;
 
-/**
- * …Ã∆∑≤Ÿ◊˜-øÿ÷∆≤„
- *
- */
+
 @Controller
 @Scope("prototype")
 public class ProductAction extends ActionSupport{
 	private static final long serialVersionUID = 1L;
+	
     @Autowired
     private ProductService productService;
-    private String pname;
-    private double price;
+    private String productName;
+    private double productPrice;
 
-    /**
-     * ±£¥Ê…Ã∆∑≤Ÿ◊˜
-     * 
-     * @return
-     */
     public String saveProduct() {
-        Product product = new Product(pname, price);
+        Product product = new Product(productName,productPrice);
         productService.saveProduct(product);
-        this.addActionMessage("±£¥Ê≥…π¶...");
+        this.addActionMessage("‰øùÂ≠òÊàêÂäüÔºÅ");
         return SUCCESS;
     }
 
-    public String getPname() {
-        return pname;
-    }
+    
 
-    public void setPname(String pname) {
-        this.pname = pname;
-    }
+    public String getProductName() {
+		return productName;
+	}
 
-    public double getPrice() {
-        return price;
-    }
 
-    public void setPrice(double price) {
-        this.price = price;
 
-    }
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
 
-    @Override
+
+
+	public double getProductPrice() {
+		return productPrice;
+	}
+
+
+
+	public void setProductPrice(double productPrice) {
+		this.productPrice = productPrice;
+	}
+
+
+
+	@Override
     public void validate() {
-        if(pname == null || "".equals(pname.trim())) {
-            this.addFieldError("pname", "…Ã∆∑√˚≥∆≤ªƒ‹Œ™ø’");
+        if(productName == null || "".equals(productName.trim())) {
+            this.addFieldError("productName", "ÂïÜÂìÅÂêçÁß∞‰∏çËÉΩ‰∏∫Á©∫");
         }
     }
 }

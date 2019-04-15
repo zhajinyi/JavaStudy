@@ -1,55 +1,41 @@
 package com.zhajinyi.bean;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="product", catalog = "ssh")
 public class Product {
+	 
+    private int productId;// 鍟嗗搧ID
+    private String productName;// 鍟嗗搧鍚嶇О
+    private double productPrice;// 鍟嗗搧浠锋牸
+    
+    public Product(String productName,double productPrice) {
+    	this.productName = productName;
+    	this.productPrice = productPrice;
+		// TODO Auto-generated constructor stub
+	}
+    
+	public int getProductId() {
+		return productId;
+	}
+	public void setProductId(int productId) {
+		this.productId = productId;
+	}
+	public String getProductName() {
+		return productName;
+	}
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+	public double getProductPrice() {
+		return productPrice;
+	}
+	public void setProductPrice(double productPrice) {
+		this.productPrice = productPrice;
+	}
+     
 
-    @Id
-    @GeneratedValue(generator = "id")
-    @GenericGenerator(name = "id", strategy = "native") //自定义主键生成策略 generator = name
-    private int id;// 商品ID
-    @Column(length = 100)
-    private String name;// 商品名称
-    private double price;// 商品价格
-
-    public Product() {
-    }
-
-    public Product(String name, double price) {
-        this.name = name;
-        this.price = price;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
+     
 }
