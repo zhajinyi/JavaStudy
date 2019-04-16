@@ -4,12 +4,15 @@
     "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
-
+	<!-- 是否启用开发模式 -->
     <constant name="struts.devMode" value="true" />
-
-    <package name="basicstruts2" extends="struts-default">
-        <action name="index">
-            <result>/index.jsp</result>
+    <!-- struts配置文件改动后，是否重新加载 -->
+    <constant name="struts.configuration.xml.reload" value="true" />
+    <!-- 默认访问页面 -->
+    <package name="default" extends="struts-default" namespace="/">
+        <default-action-ref name="default" />
+        <action name="default">
+            <result>/WEB-INF/view/index.jsp</result>
         </action>
     </package>
 

@@ -3,7 +3,6 @@ package com.ssh.dao;
 import java.util.List;
 
 import com.ssh.pojo.Department;
-
 public interface DepartmentDao {
 	
 	int add (Department department);

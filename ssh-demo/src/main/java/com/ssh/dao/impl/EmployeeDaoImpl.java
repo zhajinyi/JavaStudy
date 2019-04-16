@@ -6,10 +6,11 @@ import javax.mail.Flags.Flag;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
 
 import com.ssh.dao.EmployeeDao;
 import com.ssh.pojo.Employee;
-
+@Repository
 public class EmployeeDaoImpl implements EmployeeDao {
 	
 	private SessionFactory sessionFactoty;

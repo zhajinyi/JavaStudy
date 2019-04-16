@@ -9,6 +9,10 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 	
+	
+	<!-- 基于注解的ioc-->
+	<context:annotation-config></context:annotation-config> 	
+	
 	<!-- 开启包扫描，并注册注解 -->
     <context:component-scan base-package="com.ssh.*"/>	
 		

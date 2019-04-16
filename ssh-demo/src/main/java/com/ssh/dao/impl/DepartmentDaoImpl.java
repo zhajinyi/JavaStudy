@@ -2,9 +2,11 @@ package com.ssh.dao.impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.ssh.dao.DepartmentDao;
 import com.ssh.pojo.Department;
-
+@Repository
 public class DepartmentDaoImpl implements DepartmentDao {
 
 	@Override

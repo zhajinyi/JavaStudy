@@ -5,7 +5,7 @@
 		 id="WebApp_ID" version="3.0">
     <display-name>ssh-demo</display-name>
     <welcome-file-list>
-      <welcome-file>index.action</welcome-file>
+      <welcome-file>default.action</welcome-file>
     </welcome-file-list>		 
 	<!-- 配置Struts2过滤器 -->
 	<filter>
