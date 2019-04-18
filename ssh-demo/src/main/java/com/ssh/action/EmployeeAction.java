@@ -4,6 +4,7 @@ package com.ssh.action;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -58,7 +59,8 @@ public class EmployeeAction extends ActionSupport {
 
 
 	public String getEmps() {
-		pn = Integer.parseInt(ServletActionContext.getRequest().getParameter("pn"));
+		Map<String,String[]> map = ServletActionContext.getRequest().getParameterMap();
+		pn = map.isEmpty()==true?1:Integer.parseInt(map.get("pn")[0]);
 		PageHelper.startPage(pn, 10);
 		List<Employee> employees = employeeService.getAll();
 		pageInfo = new PageInfo<Employee>(employees, 10);

@@ -20,9 +20,11 @@
     border-color: #e6e6e6;
 }
 .table_conent{
-	border-top-width: 1px;
+	border-top-width: 0.5px;
     border-top-style: solid;
     border-top-color: #e6e6e6;
+    width: 99%;
+    margin: auto;
 }
 .bottom{
 	position: absolute;
@@ -41,4 +43,13 @@
 	text-align:left;
 	margin-left: 15px;
 	padding: 7px 0px 7px 0px;
+}
+th{
+	text-align: center;
+}
+td{
+	text-align: center;
+}
+.loadingTr td h1{
+	text-align: center;
 }
