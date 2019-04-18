@@ -35,8 +35,8 @@ class ToolBar extends React.Component{
     render(){
         return (
                 <div className='row toolStyle'>
-                    <button type='button' className='btn btn-primary btnStyle'  onClick={this.updateEvent}>修改</button>
-                    <button type='button' className='btn btn-danger' onClick={this.deleteEvent}>删除</button>
+                    <button type='button' className='btn btn-success btnStyle btn-xs'  onClick={this.updateEvent}><span className='glyphicon glyphicon-plus' aria-hidden='true'></span>新增</button>
+                    <button type='button' className='btn btn-danger btn-xs' onClick={this.deleteEvent}><span className='glyphicon glyphicon-remove' aria-hidden='true'></span>删除</button>
                 </div>
                 );
     }

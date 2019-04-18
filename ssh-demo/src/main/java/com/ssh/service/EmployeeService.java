@@ -1,5 +1,7 @@
 package com.ssh.service;
 
+import java.util.List;
+
 import com.ssh.pojo.Employee;
 import com.ssh.utils.Msg;
 
@@ -10,10 +12,10 @@ public interface EmployeeService {
 	
 	Msg delete (Integer id);
 	
-	Msg getByPrimaryKey (Integer id);
+	Employee getByPrimaryKey (Integer id);
 	
-	Msg getAll ();
+	List<Employee> getAll ();
 	
-	Msg getByTemplete (Employee employee);
+	List<Employee> getByTemplete (Employee employee);
 
 }

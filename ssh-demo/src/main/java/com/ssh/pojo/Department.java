@@ -8,8 +8,14 @@ public class Department {
 	
 	private String name;
 	
-	private Set<Employee> employees;
-
+	public Department(Integer id) {
+		this.id = id;
+	}
+	
+	public Department() {
+		
+	}
+	
 	public Integer getId() {
 		return id;
 	}
@@ -25,15 +31,4 @@ public class Department {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public Set<Employee> getEmployees() {
-		return employees;
-	}
-
-	public void setEmployees(Set<Employee> employees) {
-		this.employees = employees;
-	}
-	
-	
-
 }

@@ -11,11 +11,5 @@
         <property name="name" type="java.lang.String">
             <column name="NAME" />
         </property>
-        <set name="employees" table="EMPLOYEE" inverse="false" lazy="true">
-            <key>
-                <column name="ID" />
-            </key>
-            <one-to-many class="com.ssh.pojo.Employee" />
-        </set>
     </class>
 </hibernate-mapping>

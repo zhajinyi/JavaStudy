@@ -56,7 +56,16 @@
 	    <artifactId>struts2-spring-plugin</artifactId>
 	    <version>${struts2.version}</version>
 	</dependency>	
-	
+
+	<!-- Spring-Test单元测试模块 -->
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-test</artifactId>
+	    <version>${spring.version}</version>
+	    <scope>test</scope>
+	</dependency>
+		
 	<!-- hibernate-core核心组件 -->
 	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 	<dependency>
@@ -111,6 +120,30 @@
 	    <version>8.0.1</version>
 	    <scope>provided</scope>
 	</dependency>
+	
+	<!-- 分页插件 -->
+	<!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper -->
+	<dependency>
+	    <groupId>com.github.pagehelper</groupId>
+	    <artifactId>pagehelper</artifactId>
+	    <version>5.0.0</version>
+	</dependency>
+	<!-- json处理类 -->
+	<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>fastjson</artifactId>
+	    <version>1.2.57</version>
+	</dependency>
+	
+	<!-- struts2整合ajax的jar包 -->
+	<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-json-plugin -->
+	<dependency>
+	    <groupId>org.apache.struts</groupId>
+	    <artifactId>struts2-json-plugin</artifactId>
+	    <version>${struts2.version}</version>
+	</dependency>
+	
 	
   </dependencies>
   

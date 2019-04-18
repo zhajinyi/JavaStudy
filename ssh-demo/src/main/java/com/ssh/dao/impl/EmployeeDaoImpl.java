@@ -6,13 +6,14 @@ import javax.mail.Flags.Flag;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.ssh.dao.EmployeeDao;
 import com.ssh.pojo.Employee;
 @Repository
 public class EmployeeDaoImpl implements EmployeeDao {
-	
+	@Autowired
 	private SessionFactory sessionFactoty;
 	private boolean Flag = false;
 	
@@ -25,7 +26,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	public void setSessionFactoty(SessionFactory sessionFactoty) {
 		this.sessionFactoty = sessionFactoty;
 	}
-
+	
 	@Override
 	public boolean add(Employee employee) {
 		Session session = null;
@@ -79,8 +80,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	@Override
 	public List<Employee> getAll() {
 		Session session = sessionFactoty.openSession();
-		Query<Employee> query = session.createSQLQuery("select * from employee e left join department d on e.department_id = d.id");
-		List<Employee> employees = query.list();
+		List<Employee> employees = session.createQuery("from Employee E left join fetch E.department", Employee.class).getResultList();
 		return employees;
 	}
 

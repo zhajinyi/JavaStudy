@@ -12,10 +12,17 @@
 }
 .content_body_content{
 	width:60%;
-	margin: auto;	
+	margin: auto;
+	/* background-color: #e6e6e6; */
+	border-radius: 5px;
+	border-width: 1px;
+    border-style: solid;
+    border-color: #e6e6e6;
 }
 .table_conent{
-	margin-top: 20px;
+	border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #e6e6e6;
 }
 .bottom{
 	position: absolute;
@@ -28,9 +35,10 @@
 	height: 75px;
 }
 .btnStyle{
-	margin-right: 15px;
+	margin-right: 5px;
 }
 .toolStyle{
 	text-align:left;
-	margin-left: 30px;
+	margin-left: 15px;
+	padding: 7px 0px 7px 0px;
 }

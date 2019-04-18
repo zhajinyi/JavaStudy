@@ -1,5 +1,7 @@
 package com.ssh.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ssh.dao.EmployeeDao;
@@ -31,21 +33,21 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	public Msg getByPrimaryKey(Integer id) {
+	public Employee getByPrimaryKey(Integer id) {
 		// TODO Auto-generated method stub
-		return Msg.success().add("employee", employeeDao.getByPrimaryKey(id));
+		return employeeDao.getByPrimaryKey(id);
 	}
 
 	@Override
-	public Msg getAll() {
+	public List<Employee> getAll() {
 		// TODO Auto-generated method stub
-		return Msg.success().add("employees", employeeDao.getAll());
+		return employeeDao.getAll();
 	}
 
 	@Override
-	public Msg getByTemplete(Employee employee) {
+	public List<Employee> getByTemplete(Employee employee) {
 		// TODO Auto-generated method stub
-		return Msg.success().add("employees", employeeDao.getByTemplete(employee));
+		return employeeDao.getByTemplete(employee);
 	}
 
 	

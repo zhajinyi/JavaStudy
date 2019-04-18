@@ -18,6 +18,11 @@
             <result name="update">/page/update.jsp
             </result>
             
+            <result name="getEmps">
+            	<param name="root">action</param>
+            	 <param name="includeProperties">
+                </param>
+            </result>
             
             <result name="list">/WEB-INF/view/page/empList.jsp
             </result>
@@ -28,7 +33,14 @@
         </action>
     </package>
 
-    
+	<!-- ajax异步验证 -->   
+    <package name="SSHAjax" extends="json-default">
+        <action name="getEmps" class="com.ssh.action.EmployeeAction" method="getEmps">
+            <result name="ajax" type="json">
+            	<param name="root">pageInfo</param>
+            </result>
+        </action>
+    </package>
 
     
 
