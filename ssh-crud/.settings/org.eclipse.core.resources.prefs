@@ -1,4 +1,9 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
 encoding//src/main/java=UTF-8
 encoding//src/main/resources=UTF-8
 encoding/<project>=UTF-8
+=======
+encoding//src/main/resources/log4j.properties=UTF-8
+encoding//src/main/resources/messageResource.properties=UTF-8
+>>>>>>> branch 'master' of https://github.com/zhajinyi/JavaStudy.git

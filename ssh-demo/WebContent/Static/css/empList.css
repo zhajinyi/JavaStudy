@@ -1,0 +1,55 @@
+.head{
+	width: 100%;
+	margin: 0px 0px 0px 0px; 
+}
+.head_content{
+	width:60%;
+	margin: auto;
+}
+.content_body{
+	width: 100%;
+	margin: 0px 0px 0px 0px; 	
+}
+.content_body_content{
+	width:60%;
+	margin: auto;
+	/* background-color: #e6e6e6; */
+	border-radius: 5px;
+	border-width: 1px;
+    border-style: solid;
+    border-color: #e6e6e6;
+}
+.table_conent{
+	border-top-width: 0.5px;
+    border-top-style: solid;
+    border-top-color: #e6e6e6;
+    width: 99%;
+    margin: auto;
+}
+.bottom{
+	position: absolute;
+	top: 45%;
+	width: 100%;
+}
+.bottom_content{
+	width: 60%;
+	margin: auto;
+	height: 75px;
+}
+.btnStyle{
+	margin-right: 5px;
+}
+.toolStyle{
+	text-align:left;
+	margin-left: 15px;
+	padding: 7px 0px 7px 0px;
+}
+th{
+	text-align: center;
+}
+td{
+	text-align: center;
+}
+.loadingTr td h1{
+	text-align: center;
+}

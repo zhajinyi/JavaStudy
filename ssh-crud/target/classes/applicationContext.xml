@@ -14,6 +14,7 @@
     <!-- 开启包扫描，并注册注解 -->
     <context:component-scan base-package="com.zhajinyi.*"/>
     <context:property-placeholder location="classpath:dbconfig.properties"/>
+<<<<<<< HEAD
         <bean name="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 			<property name="jdbcUrl" value="${jdbc.jdbcUrl}"></property>
 			<property name="driverClass" value="${jdbc.driverClass}"></property>
@@ -68,4 +69,68 @@
         <aop:pointcut id="serviceOperation" expression="execution(* com.zhajinyi.service.impl..*(..))" />
         <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation" />
      </aop:config>
+=======
+    <!-- 配置C3P0连接池 -->
+    <bean name="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+    	<!-- 数据库连接相关信息 -->
+		<property name="jdbcUrl" value="${jdbc.jdbcUrl}"></property>
+		<property name="driverClass" value="${jdbc.driverClass}"></property>
+		<property name="user" value="${jdbc.user}"></property>
+		<property name="password" value="${jdbc.password}"></property>
+	</bean>
+	
+
+	
+	<!-- 配置sessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" scope="prototype">
+    	<!-- 注入连接池 -->
+    	<property name="dataSource" ref="dataSource"></property>
+    	<!-- 配置Hibernate属性 -->
+		<property name="hibernateProperties">
+		   <props>                        
+		    <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
+		    <prop key="hibernate.show_sql">true</prop>
+		    <prop key="hibernate.format_sql">true</prop>
+		    <prop key="hibernate.hbm2ddl.auto">update</prop>
+		    <prop key="hibernate.c3p0.acquire_increment">2</prop>
+		   </props>
+		  </property>	
+		<property name="mappingResources">
+		   <list>
+			   <value>com/zhajinyi/bean/Product.hbm.xml</value>
+		   </list>
+	   </property>
+    </bean>
+    
+    
+    <!-- 配置事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <!-- 注入SessionFactory -->
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+		
+    <!-- 配置事务增强 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <!-- 配置需要进行事务管理的方法，和事务传播行为 -->
+            <tx:method name="save*" propagation="REQUIRED"/>
+            <tx:method name="update*" propagation="REQUIRED"/>
+            <tx:method name="delete*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+        
+    <!-- 配置切面 -->
+    <aop:config>
+        <!-- 配置切入点 com.yjq.ssh.*.service.*+.*(..)
+            * org.ssh.service.*+.*(..)
+                *：表示方法的作用域，*表示所有
+                org.ssh.service.*：表示org.ssh.service下的任何包
+                org.ssh.service.*+：表示org.ssh.service下的任何包及其子包
+                *(..)：*表示任何方法，(..)表示方法的任何参数
+         -->
+        <aop:pointcut id="pointcut" expression="execution(* com.zhajinyi.service.impl.*.*(..))"/>
+        <!-- 适配切入点和事务增强 -->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
+    </aop:config>
+>>>>>>> branch 'master' of https://github.com/zhajinyi/JavaStudy.git
 </beans>

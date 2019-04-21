@@ -175,7 +175,15 @@
 	    <artifactId>jackson-databind</artifactId>
 	    <version>2.8.8</version>
 	</dependency>
-
+	
+	<!-- 加入Redis数据库依赖 -->
+	<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+	<dependency>
+	    <groupId>redis.clients</groupId>
+	    <artifactId>jedis</artifactId>
+	    <version>2.9.0</version>
+	</dependency>
+	
   
   </dependencies>
 </project>

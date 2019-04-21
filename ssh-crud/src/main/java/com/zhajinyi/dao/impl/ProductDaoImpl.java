@@ -29,6 +29,7 @@ public class ProductDaoImpl implements ProductDao{
 	}
     
 
+<<<<<<< HEAD
 	@Override
 	public void saveProduct(Product product) {
 		Session session=getSession();
@@ -37,4 +38,10 @@ public class ProductDaoImpl implements ProductDao{
 		
 	}
 
+=======
+    @Override
+    public void saveProduct(Product product) {
+        template.save(product);
+    }
+>>>>>>> branch 'master' of https://github.com/zhajinyi/JavaStudy.git
 }
